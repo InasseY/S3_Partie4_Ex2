@@ -21,14 +21,15 @@ namespace Partie4_Ex2
 
             Console.WriteLine($"le contenu du 4ème élément est {langage[3]}");
             Console.WriteLine($"le contenu de l'index 4 de la liste est {langage[4]}");
-            langage.RemoveAt(5);//suppression de la commande
+            langage.Remove("Bootstrap");//suppression de la commande
 
             langage.ForEach(Console.WriteLine);
             Console.WriteLine($"la commande a été supprimé");
-            langage[2] = "Javascript";
+            int index = langage.IndexOf("Javacript");//correction du mot
+            langage[index] = "Javascript";
 
             //ajout de nouvelle variable
-            langage.Insert(7, "C");
+            langage.Add("c");
             langage.ForEach(Console.WriteLine);
         }
 }
